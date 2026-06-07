@@ -6,7 +6,7 @@ function User() {
 
   const getusers=async()=>{
   
-      const data= await axios.get('http://ums12.runasp.net/api/users');
+      const data= await axios.get('https://ums12.runasp.net/api/users');
       console.log(data.data);
       return data.data;
   }
