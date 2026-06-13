@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
+import Create from './Create';
 
 function User() {
 
@@ -26,7 +27,7 @@ function User() {
 
   return (
     <>
-  
+    <Create />
   <div className="bg-white border border-gray-200 rounded-xl p-6">
 
     <div className="flex items-center justify-between mb-4">
