@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
-
+import { Link } from 'react-router-dom'
 
 function User() {
 
@@ -61,13 +61,13 @@ function User() {
             <td className="px-3 py-3 text-blue-500 border-b border-gray-100">{user.email}</td>
             <td className="px-3 py-3 border-b border-gray-100">{user.age}</td>
             <td className="px-3 py-3 text-gray-400 border-b border-gray-100">
-             
-            </td>
-            <td className="px-3 py-3 border-b border-gray-100">
-              <div className="flex gap-1.5">
-                
+              <div class="flex gap-1.5">
+                <Link to={`/user-details/${user.id}`} class="px-2 py-1 text-xs border border-gray-200 rounded-md text-gray-500 hover:bg-gray-50 transition cursor-pointer">View</Link>
+                <button class="px-2 py-1 text-xs border border-gray-200 rounded-md text-gray-500 hover:bg-gray-50 transition cursor-pointer">Edit</button>
+                <button class="px-2 py-1 text-xs border border-red-100 rounded-md text-red-500 hover:bg-red-50 transition cursor-pointer">Delete</button>
               </div>
             </td>
+            
           </tr>
       ))}
    
